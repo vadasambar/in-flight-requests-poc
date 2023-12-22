@@ -31,6 +31,7 @@ func main() {
 	// keep the server running until Ctrl+C is pressed
 	defer wg.Wait()
 
+	// creates N goroutines to send N requests
 	// 4 is the number of concurrent requests
 	sendNRequests("http://localhost:8080/hello", 4)
 
